@@ -44,13 +44,13 @@
                     <p class="lead">This is Part 1.3</p>
                 </div>
                 <div class="col-lg-2 order-1 mb-3 d-flex flex-column gap-2 mx-auto align-items-stretch">
-                    <button name="1.3.1" class="btn btn-success btn-block" data-sql=" SELECT dm.dept_id, count(DISTINCT e.emp_id) AS 'num_empGender', e.gender FROM dept_manager dm LEFT JOIN employees e ON dm.emp_id = e.emp_id GROUP BY e.gender, dm.dept_id ORDER BY dm.dept_id;" onClick="reply_click(this)">Question 1.3.1</button>
-                    <button name="1.3.2" class="btn btn-success btn-block" data-sql="SELECT e.gender, avg(s.salary) AS 'avg_salary', t.title FROM employees e JOIN salaries s ON e.emp_id = s.emp_id JOIN titles t ON e.emp_id = t.emp_id WHERE t.title = 'technique leader' GROUP BY e.gender;
+                    <button name="1.3.1" class="btn btn-success btn-block" data-sql=" SELECT dm.dept_id, count(DISTINCT e.emp_id) AS 'num_empGender', e.gender &#10;FROM dept_manager dm LEFT JOIN employees e ON dm.emp_id = e.emp_id &#10;GROUP BY e.gender, dm.dept_id &#10;ORDER BY dm.dept_id;" onClick="reply_click(this)">Question 1.3.1</button>
+                    <button name="1.3.2" class="btn btn-success btn-block" data-sql="SELECT e.gender, avg(s.salary) AS 'avg_salary', t.title &#10;FROM employees e &#10;JOIN salaries s ON e.emp_id = s.emp_id &#10;JOIN titles t ON e.emp_id = t.emp_id &#10;WHERE t.title = 'technique leader' &#10;GROUP BY e.gender;
                     " onClick="reply_click(this)">Question 1.3.2</button>
-                    <button name="1.3.3" class="btn btn-success btn-block" data-sql=" SELECT count(e.emp_id) AS 'Number of Employees' FROM employees e JOIN salaries s ON s.emp_id = e.emp_id WHERE s.to_date = '9999-01-01' AND s.salary >= 90000 AND s.salary <=90040 LIMIT 100;" onClick="reply_click(this)">Question 1.3.3</button>
-                    <button name="1.3.4" class="btn btn-success btn-block" data-sql=" SELECT e.first_name, e.last_name, s.salary FROM employees e INNER JOIN salaries s ON e.emp_id = s.emp_id WHERE s.to_date = '9999-01-01' AND s.salary > 90000 GROUP BY e.last_name, e.first_name ORDER BY e.last_name DESC, e.first_name DESC LIMIT 100;
+                    <button name="1.3.3" class="btn btn-success btn-block" data-sql=" SELECT count(e.emp_id) AS 'Number of Employees' &#10;FROM employees e &#10;JOIN salaries s ON s.emp_id = e.emp_id &#10;WHERE s.to_date = '9999-01-01' AND s.salary >= 90000 AND s.salary <=90040 &#10;LIMIT 100;" onClick="reply_click(this)">Question 1.3.3</button>
+                    <button name="1.3.4" class="btn btn-success btn-block" data-sql=" SELECT e.first_name, e.last_name, s.salary &#10;FROM employees e INNER JOIN salaries s ON e.emp_id = s.emp_id &#10;WHERE s.to_date = '9999-01-01' AND s.salary > 90000 &#10;GROUP BY e.last_name, e.first_name &#10;ORDER BY e.last_name DESC, e.first_name DESC &#10;LIMIT 100;
                     " onClick="reply_click(this)">Question 1.3.4</button>
-                    <button name="1.3.5" class="btn btn-success btn-block" data-sql=" SELECT e.first_name, e.last_name, s.* FROM employees e JOIN salaries s ON s.emp_id = e.emp_id WHERE e.emp_id = 10012 Order BY s.to_date DESC LIMIT 100;
+                    <button name="1.3.5" class="btn btn-success btn-block" data-sql=" SELECT e.first_name, e.last_name, s.* &#10;FROM employees e JOIN salaries s ON s.emp_id = e.emp_id &#10;WHERE e.emp_id = 10012 &#10;Order BY s.to_date DESC &#10;LIMIT 100;
                     " onClick="reply_click(this)">Question 1.3.5</button>
                     
                 </div>
@@ -65,7 +65,7 @@
                 </div>
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1-*/mode/sql/sql.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
